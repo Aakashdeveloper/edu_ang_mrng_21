@@ -1,5 +1,6 @@
-=> Template Forms
-=> Reactive Forms
+=> Template Forms >>> more work on html side
+////////////////
+=> Reactive Forms >>> more work on ts side
 => Login Logout(JWT) (no backend)
 => oauth with Github (no backend)
 => Payment gateway integration (no backend)
@@ -43,3 +44,36 @@
 (Header) => {'x-access-token':'token value from login'}
 
 https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps
+
+
+///////flow///////
+package.json > angular.json > main.ts > app.module.ts > app.component.ts
+ Code Compile
+Binding in index.html and load in browser
+
+
+////////
+ng-untouched  ng-touched > when we go inside the field
+ng-pristine ng-dirty > when we input the value
+ng-valid ng-invalid > when validation does not match
+
+
+var city = "amSterDaM"
+"Amsterdam"
+
+var city = "amSterDaM"
+undefined
+city.charAt(0).toUpperCase()+city.slice(1).toLowerCase()
+
+'Amsterdam'
+
+////////
+dummy api
+////////
+
+//One Time//
+> install global package
+# npm i -g json-server
+
+//Next when you wanr api
+# json-server --watch user.json --port 4500

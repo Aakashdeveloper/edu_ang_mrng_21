@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "firstName": "John",
+      "lastName": "jhhjg",
+      "email": "john@gmail.com",
+      "password": "7676767767",
+      "phone": "8787878",
+      "codelang": "Angular",
+      "id": 1
+    },
+    {
+      "firstName": "Aakash",
+      "lastName": "kumar",
+      "email": "aakash@gmail.com",
+      "password": "76756565765",
+      "phone": "8787878",
+      "codelang": "Angular",
+      "id": 2
+    }
+  ]
+}
