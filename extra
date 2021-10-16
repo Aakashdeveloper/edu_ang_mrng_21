@@ -1,11 +1,12 @@
 => Template Forms >>> more work on html side
+=> Login Logout(JWT) (no backend)
 ////////////////
 => Reactive Forms >>> more work on ts side
-=> Login Logout(JWT) (no backend)
-=> oauth with Github (no backend)
-=> Payment gateway integration (no backend)
 => Github
 => Deployment(aws/heroku)
+
+=> oauth with Github (no backend)
+=> Payment gateway integration (no backend)
 => First 2 Page of hotelBooking (no backend)
 => Multi lang
 => Testing
