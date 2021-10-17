@@ -13,6 +13,8 @@ import { UserService } from './users/user.service';
 import { UserComponent } from './users/user.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LoginGaurdService } from './login-gaurd.service';
+import { AdminGaurdService } from './admin-gaurd.service';
 
 @NgModule({
     declarations: [
@@ -32,7 +34,9 @@ import { ProfileComponent } from './profile/profile.component';
     providers: [
         RegisterPosterService,
         LoginService,
-        UserService
+        UserService,
+        LoginGaurdService,
+        AdminGaurdService
     ],
     bootstrap: [
         AppComponent
