@@ -1,1 +1,89 @@
-<h1>React Form</h1>
+<br/>
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Reactive Form
+    </div>
+    <div class="panel-body">
+        <form (ngSubmit)="save()" [formGroup]="userform">
+            <div class="form-group" [ngClass]="{'has-error':(!userform.get('firstName').valid)}">
+                <label class="control-label">
+                    First Name
+                </label>
+                <input type="text" class="form-control" id="fname"
+                formControlName="firstName"/>
+                <span class="help-block" *ngIf="(userform.get('firstName').errors)">
+                    <span *ngIf="userform.get('firstName').errors.required">
+                        First Name is required
+                    </span>
+                    <span *ngIf="userform.get('firstName').errors.minlength">
+                       Min length is 5
+                    </span>
+                </span>
+            </div>
+            <div class="form-group" [ngClass]="{'has-error':(!userform.get('email').valid)}">
+                <label class="control-label">
+                    Email
+                </label>
+                <input type="text" class="form-control" id="email"
+                formControlName="email"/>
+                <span class="help-block" *ngIf="(userform.get('email').errors)">
+                    <span *ngIf="userform.get('email').errors.required">
+                        Email is required
+                    </span>
+                    <span *ngIf="userform.get('email').errors.pattern">
+                        Please Enter Valid Email
+                    </span>
+                </span>
+            </div>
+            <div class="form-group" [ngClass]="{'has-error':(!userform.get('phone').valid)}">
+                <label class="control-label">
+                    Phone
+                </label>
+                <input type="text" class="form-control" id="phone"
+                formControlName="phone"/>
+                <span class="help-block" *ngIf="(userform.get('phone').errors)">
+                    <span *ngIf="userform.get('phone').errors.required">
+                        Phone is required
+                    </span>
+                </span>
+            </div>
+            <div class="form-group" [ngClass]="{'has-error':(!userform.get('rating').valid)}">
+                <label class="control-label">
+                    Rating
+                </label>
+                <input type="text" class="form-control" id="rating"
+                formControlName="rating"/>
+                <span class="help-block" *ngIf="(userform.get('rating').errors)">
+                    <span *ngIf="userform.get('rating').errors.required">
+                        Rating is required
+                    </span>
+                    <span *ngIf="userform.get('rating').errors.range">
+                        Rating Should be in range of 1 to 5
+                    </span>
+                </span>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">
+                    Notification
+                </label>
+                <div class="col-md-10">
+                    <label class="radio-inline">
+                        <input type="radio" value="phone"
+                        formControlName="notification"
+                        (click)="setNotification('phone')"/> Phone
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="email"
+                        formControlName="notification"
+                        (click)="setNotification('email')"/> Email
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-success"
+                [disabled] = "!userform.valid">
+                    Submit
+                </button>
+                
+            </div>
+        </form>
+    </div>
+</div>

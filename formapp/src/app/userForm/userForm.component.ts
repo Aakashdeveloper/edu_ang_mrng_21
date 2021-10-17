@@ -11,7 +11,7 @@ import {FormPosterService} from './userForm.service';
 
 export class UserFormComponent {
     hasCodeLangError = false;
-    myEmployee = new IUser('', '', '', '', 0, '');
+    myEmployee = new IUser('', '', '', '', 0, 'default');
     languages = ["Node", "React", "Angular", "MongoDb"]
 
     constructor(private formPosterService: FormPosterService) {}
